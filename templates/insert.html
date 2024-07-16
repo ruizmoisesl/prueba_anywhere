@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/insert.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+
+        <h1>Nuevo Miembro</h1>
+
+        <form action="/miembros/insertar" method="post">
+            <div class="campos">
+                <div class="camp">
+                    <label for="">Matricula</label>
+                    <input type="number" name="numero_matricula" min="0" placeholder="Numero de Matricula">
+                </div>
+                <div class="camp">
+                    <label for="">Documento</label>
+                    <input type="number" min="0" name="numero_documento" placeholder="Numero de documento">
+                </div>
+                <div class="camp">
+                    <label for="">Nombre</label>
+                    <input type="text" name="nombre" placeholder="Nombre de miembro">
+                </div>
+                <div class="camp">
+                    <label for="">Apellido</label>
+                    <input type="text" name="apellido" placeholder="Apellido de miembro">
+                </div>
+                <div class="camp">
+                    <label for="" id="tipo_miembro">Tipo de miembro</label>
+                    <select name="tipo_miembro" id="">
+                        <option value="#" name="tipo_miembro">Seleccione el tipo</option>
+                        <option name="tipo_miembro" value="Estudiante">Estudiante</option>
+                        <option name="tipo_miembro" value="Profesor">Profesor</option>
+                    </select>
+                </div>  
+                <div class="grp">
+                    <div class="camp">
+                        <label for="">Grado</label>
+                        <select name="grado" id="" class="select-1">
+                            <option value="#" name="grado">#</option>
+                            <option value="7" name="grado">7°</option>
+                            <option value="8" name="grado">8°</option>
+                            <option value="9" name="grado">9°</option>
+                            <option value="10" name="grado">10°</option>
+                            <option value="11" name="grado">11°</option>
+                        </select>
+                    </div>
+                    <div class="camp">
+                        <label for="">Grupo</label>
+                        <select name="grupo" id="" class="select-2">
+                            <option value="#" name="grupo">#</option>
+                            <option value="1" name="grupo">1</option>
+                            <option value="2" name="grupo">2</option>
+                            <option value="3" name="grupo">3</option>
+                            <option value="4" name="grupo">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="Buttons">
+                <input type="submit" value="Añadir">
+                <button type="button" id="Cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
